@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+    <script src = "JavaScript/scriptTravelCompany.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact | ACE Tours</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="register.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/ACE Tours2.jpg" alt="C&Ctours">
+            <br/>
+            <br/>
+            <br/>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+            <br/>
+            <br/>
+            <a id= "youtube" href= "https://www.youtube.com/watch?v=BtRYJlOQ3Cc" target= "blank"><i class="fa fa-youtube-play" style="font-size:56px;color:red"></i></a>
+	    </aside>
+        <article>
+            <h1> Contact </h1>
+            <p>We are always glad to hear from you!</p>
+            <p>
+		     <!--   <a href="mailto:acetours22@gmail.com">Send us an email </a>or leave a message.		-->
+            </p> 
+            <div id="log">
+                <form id="message" name= "message" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateEmail(document.message.email.value)" method="POST">
+                    <table>
+                        <tr>
+                            <td><b>Name</b></td> 
+                            <td><input type="text" name="name" size="40" required/></td>
+                        </tr>
+                        <tr>
+                            <td><b> Email </b></td>
+                            <td><input type="email" id="email" name="_replyto" required placeholder="Enter your Email" onchange="validateEmail(document.message.email.value)"/> </td>
+                        </tr>
+                        <tr>
+                            <td><b>Message</b></td>
+                            <td> <textarea rows="7" cols="40" name= "message" required></textarea>
+                        </tr>	
+                    </table>
+                    <input type="submit" id="submit" value="Submit" >
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p id="copyright">
+            Copyright &copy; of ACE Tours
+        </p>
+    </footer>
+</body>
+</html>

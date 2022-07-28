@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+  <!--  <script src = "JavaScript/scriptTravelCompany.js"></script> -->
+<!--	<script src = "JavaScript/book.js"></script>	-->
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	-->
+    <title>Booking | ACE Tours</title>
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="signup.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/ACE Tours2.jpg" alt="ACE tours">
+            <br/>
+            <br/>
+            <br/>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+            <br/>
+            <br/>
+            <a id= "youtube" href= "https://www.youtube.com/watch?v=BtRYJlOQ3Cc" target= "blank"><i class="fa fa-youtube-play" style="font-size:56px;color:red"></i></a>
+        </aside>
+        <article id="bookform">
+            <h1>Booking Page</h1>
+            <!--HTML elements to show the tours the same mark up on tours page-->
+      <!--      <div class="tours">
+                <img src=""/>
+                <div class="columns">
+                    <div class="title"></div>
+                    <div class="price"></div>
+                </div>
+                <p class= "desc"></p>
+            </div>
+		-->	
+			<br />
+			<br />
+			<form class="booking-form">
+			
+				  <label for="tour">Please Select Tour from the Drop Down List: </label>
+			
+					  <select id="tour" name="tour" type="tour" input class = "tour">
+				
+						<option value="3 Day South West of Ireland">3 Day South West of Ireland - 1,899 Euros</option>
+						<option value="5 Day Taste of Ireland">5 Day Taste of Ireland - 2,499 Euros</option>
+						<option value="7 Day Irish Classic">7 Day Irish Classic - 3,199 Euros</option>
+						<option value="10 Day Irish Spirit">10 Day Irish Spirit - 3,999 Euros</option>
+						
+					  </select>
+					<br />
+					<br />
+					<label for="date">Select Date:</label>
+                  <input class="date" type="date" id= "date" onchange=""/>
+					<br />
+					<br />
+					
+					  <label for="noOfPax">Please Select No. of Passengers (max 4 people): </label>
+			
+					  <select id="noOfPax" name="noOfPax" type="noOfPax" input class = "noOfPax">
+						<option value="1 Passenger">1 Passenger</option>
+						<option value="2 Passengers">2</option>
+						<option value="2 Passengers">3</option>
+						<option value="4 Passengers">4 (max)</option>
+						
+					  </select>
+					<br />
+					<br />
+				  <label for="">First Name*</label><br />
+				  <input class="firstName" type="text" placeholder="Enter First Name" required /><br />
+				  <br />
+				  <label for="">Last Name*</label><br />
+				  <input class="lastName" type="text" placeholder="Enter Last Name" required /><br />
+				  <br />
+				  
+				  <label for="">Email*</label><br />
+				  <input class="email" type="email" placeholder="Enter Email" required /><br />
+				  <br />
+				  <label for="">Postal Address*</label><br />
+				  <input class="address" type="address" placeholder="Enter Postal Address" required /><br />
+				  <br />
+				  
+				
+				  
+				   <label for="">Phone Number*</label><br />
+				   <select name="countryCode" id="countryCode" input class = "countryCode">
+					<option data-countryCode="US" value="1" Selected>USA (+1)</option>
+					<option data-countryCode="CA" value="1">Canada (+1)</option>
+					<option data-countryCode="AU" value="61">Australia (+61)</option>
+					<option data-countryCode="IE" value="353">Ireland (+353)</option>
+					<option data-countryCode="GB" value="44" >UK (+44)</option>
+					</select>
+				  <input class="phoneNo" type="text" pattern="[0-9]*" placeholder="Enter Phone Number" minlength="7" maxlength="10" required /><br />
+				  <br />
+				  
+			
+				 
+				  <label for="">Special Requests e.g. Dietary Requirements</label><br />
+				  <textarea
+					class="comments"
+					name=""
+					id=""
+					cols="30"
+					rows="10"
+					placeholder="Please Enter Any Special Requests you may have here..."
+				  ></textarea
+				  ><br />
+				  <br />
+				<!--  
+				  <div>
+				  <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfv608UAAAAAKccrAbr96o8xMVbZmOzlH2jKBRH&amp;co=aHR0cHM6Ly93d3cubXlpcmVsYW5kdG91ci5jb206NDQz&amp;hl=en&amp;v=CHIHFAf1bjFPOjwwi5Xa4cWR&amp;size=normal&amp;cb=u873sin99osv" width="304" height="78" role="presentation" name="a-1a9oa71ybf3z" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
+				  <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+					</div>
+					<iframe style="display: none;"></iframe>
+				-->
+				<!--  <button type="submit" onclick="location.href='payment.html'">View Tours</button> -->
+				<br />
+				  <button type="submit" >Book</button>
+				 
+				</form>
+			
+<!--
+			//    action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateBookForm(document.book.firstName.value, document.book.lastName.value, document.book.date.value, document.book.address.value, document.book.postalCode.value);" method="POST 
+			
+          //  <form name="book" id="book" >		
+		  
+			<form class="booking-form">
+            //    <!--field to take in the book information and send to the server
+                <input type="hidden" id="tours-book" name="tours-book">
+                <!--field to take the location and send to the server-->
+                <!--<input type="hidden" id="location" name="location">-->
+<!--
+                <div class="input-group">
+                    <div><label for="date">Select date</label></div>
+                    <div><input type="date" name="date" id= "date" onchange=""/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="firstName">First Name</label></div>
+                    <div><input type="text" name="firstName" id= "firstName" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="lastName">Last Name</label></div>
+                    <div><input type="text" name="lastName" id= "lastName" /></div>
+                </div>
+
+                <div class="input-group" onchange="validateAddress(document.book.address.value)">
+                    <div><label for="address">Address</label></div>
+                    <div><input type="text" name="address" id= "address"/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="state">State</label></div>
+                    <div><input type="text" name="state" id="state"/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="zipCode">Zip code</label></div>
+                    <div><input type="text" name="zipCode" id= "zipCode" onchange="validatePostalCode(document.book.postalCode.value)"/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="comments">Comments</label></div>
+                    <div>
+                        <textarea
+                        name="comments" 
+                        id= "comments"
+                        cols="30"
+                        rows="10"
+                        ></textarea>
+                    </div>
+                </div>
+
+               //   <input type="reset" value="Reset"/>	
+				  <button type="submit">Submit</button>	
+               //  <input type="submit" class="indexButton" value="Book"/> 
+            </form>  
+			
+	-->
+        </article>
+    </main>
+        <footer>
+            <p id="copyright">
+                Copyright &copy; of ACE Tours
+            </p>
+        </footer>
+		
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+		<script src="book.js"></script>
+</body>
+
+
+
+</html>

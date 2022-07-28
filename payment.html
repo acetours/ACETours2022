@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+ 
+<!--	<script src = "JavaScript/book.js"></script>	-->
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	-->
+    <title>Booking | ACE Tours</title>
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="signup.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/ACE Tours2.jpg" alt="ACE tours">
+            <br/>
+            <br/>
+            <br/>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+            <br/>
+            <br/>
+            <a id= "youtube" href= "https://www.youtube.com/watch?v=BtRYJlOQ3Cc" target= "blank"><i class="fa fa-youtube-play" style="font-size:56px;color:red"></i></a>
+        </aside>
+        <article id="payform">
+            <h1>Payment Page</h1>
+      	
+			<br />
+			<br />
+			<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form class="payment-form">
+
+        <div class="row">
+          <div class="col-50">
+		  
+				  
+            <label for=""> Full Name* </label>
+            <input type="text" class="fullName" placeholder="John M. Doe" required><br />
+			<br />
+            <label for=""> Email*</label>
+            <input type="email" class="email" placeholder="john@example.com" required ><br />
+			<br />
+			
+            <label for="tour"> Country*</label>
+			 
+			<select id="address" name="address" type="address" input class = "address">
+	
+
+			<option value="1">USA</option>
+			<option value="2">Canada</option>
+			<option value="3">Australia</option>
+			<option value="4">Ireland</option>
+			<option value="5">UK</option>
+			</select>
+        <!--    <input type="text"  class="address" placeholder="542 W. 15th Street, NYC" required ><br /> -->
+			<br />
+	
+			<br />
+			<br />
+			<br />
+			
+          <div class="col-50">
+            <h3>Card Details:</h3>
+			<br />
+           
+		     <label for="tour">Please Select Card Type from the Drop Down List:</label>
+			
+			  <select id="cardtype" name="cardtype" type="cardtype" input class = "cardtype">
+			 
+				<option value="Visa">Visa</option>
+				<option value="Mastercard">Mastercard</option>
+				<option value="Visa Debit">Visa Debit</option>
+				<option value="American Express">American Express</option>
+				
+				
+			  </select>
+			<br />
+			<br />
+            <label for= "">Name on Card*</label>
+            <input type="text" class="cardname" placeholder="John More Doe" required ><br />
+			<br />
+            <label for="">Credit Card Number*</label>
+            <input type="text" class="cardnumber" pattern="[0-9]*" placeholder="1111-2222-3333-4444" minlength="15" maxlength="16" required ><br />
+			<br />
+			
+			<label for="tour">Exp Month*</label>
+	
+		  <select id="expmonth" name="expmonth" type="expmonth" input class = "expmonth">
+		  <option value="0">Enter Month</option>
+			<option value="01">01</option>
+			<option value="02">02</option>
+			<option value="03">03</option>
+			<option value="04">04</option>
+			<option value="05">05</option>
+			<option value="06">06</option>
+			<option value="07">07</option>
+			<option value="08">08</option>
+			<option value="09">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			
+			
+		  </select>
+			<br />
+			<br />
+			
+			<label for="tour">Exp Year*</label>
+	
+			  <select id="expyear" name="expyear" type="expyear" input class = "expyear">
+			  <option value="0">Enter Year</option>
+				<option value="2022">2022</option>
+				<option value="2023">2023</option>
+				<option value="2024">2024</option>
+				<option value="2025">2025</option>
+				<option value="2026">2026</option>
+				<option value="2027">2027</option>
+				<option value="2028">2028</option>
+				<option value="2029">2029</option>
+				<option value="2030">2030</option>
+				<option value="2031">2031</option>
+				<option value="2032">2032</option>
+		
+			  </select>
+			<br />
+			<br />
+			
+              <div class="col-50">
+                <label for="cvv">CVV Number*</label>
+                <input type="text" class="cvv" pattern ="[0-9]*" placeholder="352" maxlength="3" minlength="3" required ><br />
+				<br />
+				<br />
+              </div>
+            </div>
+          </div>
+
+        </div>
+    <!--    <label>
+          <input type="checkbox" checked="checked" class ="sameadr"> Shipping address same as billing
+        </label>	-->
+		
+		<br />
+		<br />
+        <input type="submit" value="Pay Now" class="btn">
+      </form>
+    </div>
+  </div>
+
+</div>
+        </article>
+    </main>
+        <footer>
+            <p id="copyright">
+                Copyright &copy; of ACE Tours
+            </p>
+        </footer>
+		
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+		<script src="payment.js"></script>
+</body>
+
+
+
+</html>

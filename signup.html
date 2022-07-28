@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tours | ACE Tours</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="signup.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/ACE Tours2.jpg" alt="C&Ctours">
+            <br/>
+            <br/>
+            <br/>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+            <br/>
+            <br/>
+            <a id= "youtube" href= "https://www.youtube.com/watch?v=BtRYJlOQ3Cc" target= "blank"><i class="fa fa-youtube-play" style="font-size:56px;color:red"></i></a>
+        </aside>
+		<article id="signupform">
+		
+			
+			<h1>Sign Up to Receive Great Offers!</h1><br />
+			
+			
+			<!--
+				  <label for="tour">Please Select Tour from the Drop Down List: </label>
+			
+					  <select id="tour" name="tour" type="tour" input class = "tour">
+						<option value="3 Day South West of Ireland">3 Day South West of Ireland</option>
+						<option value="5 Day Taste of Ireland">5 Day Taste of Ireland</option>
+						<option value="7 Day Irish Classic">7 Day Irish Classic</option>
+						<option value="10 Day Irish Spirit">10 Day Irish Spirit</option>
+						
+					  </select>
+					<br />
+					<br />
+					<label for="date">Select Date:</label>
+                  <input class="date" type="date" id= "date" onchange=""/>
+					<br />
+					<br />
+					
+					  <label for="noOfPax">Select No. of Passengers (max 4 people): </label>
+			
+					  <select id="noOfPax" name="noOfPax" type="noOfPax" input class = "noOfPax">
+						<option value="1 Passenger">1 Passenger</option>
+						<option value="2 Passengers">2</option>
+						<option value="2 Passengers">3</option>
+						<option value="4 Passengers">4 (max)</option>
+						
+					  </select>
+					  -->
+					 
+				 <form class="signup-form">
+					<br />
+					<br />
+				  <label for="">Full Name*</label><br />
+				  
+				  <input class="full_name" type="full_name" placeholder="Enter Full Name" required /><br />
+				  <br />
+				    <br />
+				  <label for="">Email*</label><br />
+				  <input class="email" type="email" placeholder="Enter Email" required /><br />
+				  <br />
+				    <br />
+				  
+				  
+			
+				
+				   <label for="country">Nationality</label>
+				    
+						  <select id="nationality" name="nationality" input class="nationality"  >
+						  <option value="American">USA</option>
+							<option value="Canadian">Canada</option> <br/>
+							 </select>
+		
+				  <br />
+				  <br />
+				  <br />
+				   <label for="irish_ancestory">Do you have Irish Ancestory?</label>
+						  <select id="irish_ancestory" name="irish_ancestory" input class="irish_ancestory">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+							<option value="Not Sure">Im Not Sure</option>
+							
+						  </select><br />
+						  <br />
+						    <br />
+						  
+						  
+			<!--	   <label for="">First Ireland Trip</label><br />
+				  <input class="been_to_ireland_before" type="been_to_ireland_before" placeholder="Enter Yes/NO" /><br />
+				  <br />
+				  -->
+				  <label for="mailingList">I would like to receive email offers, travel tips and destination information.</label>
+						  <select id="mailingList" name="mailingList" input class="mailingList">
+							<option value="yes">Yes</option>
+							<option value="no">No</option> <br />
+							
+						  </select><br />
+				  
+				<!--    <label for="">Email Consent</label><br />
+				  <input class="mailingList" type="mailingList" placeholder="Enter Yes/No" /><br />
+				  <br />	-->
+				  
+				
+				    <br />
+					  <br />
+					   <div>
+				
+					  <br />
+					  <br />
+
+					 
+				    <button type="submit">Sign-Up</button>
+				</form>
+				 <!-- 
+				  <label for="">Special Requests e.g. Dietary Requirements etc</label><br />
+				  <textarea
+					class="comments"
+					name=""
+					id=""
+					cols="30"
+					rows="10"
+					placeholder="Please Enter Any Special Requests you may have here..."
+				  >
+				  </textarea
+				  ><br />
+				  -->
+				  
+				
+		
+		<!--
+        <article>
+            
+            <section class="columns-desktop">
+                <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> ACE TOURS Sign-Up </h2>
+                </div>
+				</br>
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+					 <form id="contactForm">
+						
+						<label for="full_name">Full Name</label> </br>
+                        <input type="text" id="full_name" placeholder="Full name"> </br>
+						</br>
+						<label for="email">Email</label> </br>
+                        <input type="email" id="email" placeholder="Email"> </br>
+						</br>
+						<label for="password">Password</label> </br>
+                        <input type="password" id="password" placeholder="New Password"></br>
+						</br>
+               
+						  
+						   <label for="country">Nationality</label>
+						  <select id="nationality" name="nationality">
+						  <option value="usa">USA</option>
+							<option value="australia">Australia</option>
+							<option value="canada">Canada</option>
+							
+						  </select> </br>
+						  </br>
+						  <label for="been_to_ireland_before">Been to Ireland before?</label>
+						  <select id="been_to_ireland_before" name="been_to_ireland_before">
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+							
+						  </select>
+						  
+		
+						
+						</select> </br>
+						  </br>
+						  <label for="mailingList">I would like to receive email offers, travel tips and destination information.</label>
+						  <select id="mailingList" name="mailingList">
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+							
+						  </select
+					
+					</br>
+						</br>
+                        <div id="button_container">
+                            <button onclick="login()">Login</button>
+                            <button onclick="register()">Register</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+		</form>
+            </section>
+        </article>
+		-->
+		</article>
+    </main>
+    <footer>
+        <p id="copyright">
+            Copyright &copy; of ACE Tours
+        </p>
+    </footer>
+</body>
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>		
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>		
+	
+	<!--
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>	-->
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="signup.js"></script>
+</html>

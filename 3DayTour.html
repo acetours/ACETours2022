@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tours | ACE Tours</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="signup.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside> <img src="images/ACE Tours2.jpg" alt="Ireland Luxury Tours">
+            <br/>
+            <br/>
+            <br/>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+            <br/>
+            <br/>
+            <div class="tours">
+                <img src="images/cashel.jpg" alt="Rock of Cashel" />
+                <div class="columns">
+                    <div class="title">3-Day Tour</div>
+                    <div class="price">€1,899</div>
+                </div>
+                <p class="desc">South West of Ireland</p>
+                <button class="indexButton" data-book="cashel">Book Now</button>
+            </div>
+            <br/>
+            <br/>
+            <a id= "youtube" href= "https://www.youtube.com/watch?v=BtRYJlOQ3Cc" target= "blank"><i class="fa fa-youtube-play" style="font-size:56px;color:red"></i></a>
+        </aside>
+        <article>
+            <h1>Tours</h1>
+            <br/>
+            <div id="tabs">
+               <h2>3-Day Southwest of Ireland Tour  </h2>
+               <p> ** Please note due to Covid-19 this tour is limited to maximum 4 pax only **
+                   At 09.00 your expert driver-guide will collect you at your designated starting point in Dublin 
+                   to start your 3-day tour of Ireland. You will have your driver-guide for 3 days while in the 
+                   southwest of Ireland so please make sure to make the most of their knowledge and ask any 
+                   questions while you are with them. 
+
+                Admission Charges and client lunch, dinners or accommodation are not included in this package. 
+                
+                This tour is based on a 8 hour touring day, typically 09.00h to 17.00h following the tour outlined. 
+                The first and last day may take 9 to 10 hours depending on traffic conditions particularly in Dublin. 
+                </p>
+                <div id="tabs-1">
+                    <p>Day1: Rock of Cashel | Blarney | Killarney </p>
+                    
+                    <p> 
+                    Departing Dublin this morning our first stop will be at one of Ireland’s most historical 
+                    sites the Rock of Cashel. This was once the seat of the High King of Ireland before it was
+                     transformed to a monastic settlement. It dates back over 900 years. From Cashel we will 
+                     travel further south to the village of Blarney for some lunch. Here we have an opportunity 
+                     to kiss the Blarney Stone and shop in one of Ireland’s best stores for Irish Gifts. From 
+                     Blarney we will continue to Killarney to check into your accommodation for your dinner and 
+                     overnight in Killarney.   
+                    </p>                   
+                    
+                    <p> Day 2: Ring of Kerry Tour </p>
+                    
+                    <p>
+                    Today you will be taken on a full day tour of the Ring of Kerry taking in many of the 
+                    beautiful scenic locations as well as ancient monuments and small attractions that the 
+                    Ring of Kerry has to offer. Your tour will take you through Killorglin which annually e
+                    lects a goat as king of its festival, Cahersiveen is a lively little town where the great 
+                    liberator Daniel O’Connell was born. Waterville and Sneem also have many interesting stories
+                     and characters as we return towards Killarney through the Magillycuddy’s Reeks mountains for
+                      your dinner and overnight. 
+                    </p>
+                     
+                    
+                    <p>Day 3:  Cliffs of Moher |Burren | back to Dublin </p>
+                    
+                    <p> 
+                    Today we will depart Killarney and say goodbye to Kerry as we head north into Co Clare, 
+                    taking a small ferry (20 minutes) over the Shannon Estuary we arrive in Co Clare and make
+                     our way straight up to the now famous Cliffs of Moher. These imposing cliffs are 700 feet 
+                     above sea level & offer unparalleled views over the Atlantic as they bear the full force of 
+                     the Wild Atlantic Way. From the cliffs, we will stop in the small village of Doolin for lunch 
+                     before taking in the ancient sites and scenery of the Burren. The Burren is a limestone region
+                      almost like a lunar landscape which is full of unique flora and fauna and many beautiful towns 
+                      and villages. We will stop take the beautiful coast road overlooking Galway Bay, stopping at 
+                      Corcomroe Abbey before we join the main road back to Dublin where you tour will end after a full 
+                      3 days. Check into your accommodation around 19.00hrs approx. </p>
+                </div>
+            </div> 
+        </article>
+    </main>
+    <footer>
+        <p id="copyright">
+            Copyright &copy; of ACE Tours
+        </p>
+    </footer>
+</body>
+<script>
+    //Add event so Js run in the page after elements are loaded
+    window.addEventListener("DOMContentLoaded", function(e) {
+        //use data button to store information from the tours
+        const tourButtons = document.querySelectorAll("button[data-book]");
+        //loop to work with each of the buttons(it was used when we had 4 tours on the same page)
+        tourButtons.forEach(function(button) {
+            //handler for the information that's gonna be selected through the buttons, tells that for eavhe button
+            //we want to run some JS
+            //e is the event argument for current target
+            button.addEventListener("click", function(e) {
+                const button = e.currentTarget;
+                const container = button.parentNode;//container where the information will be taken from
+                //build object to store information about the selected item and create properties
+                const book = {
+                    id: button.getAttribute("data-book"),
+                    //query selector used against the parent container and look for the inner text and get the data
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText
+                };
+                //were the items are stored and convert into a string
+                localStorage.setItem("book", JSON.stringify(book));
+                //code to substitute this page for the booking one
+                const url = window.location.href.replace("3DayTour.html", "book.html");
+                //set browser to the new URL
+                window.location.href = url;
+
+            });
+        });
+    });
+</script>
+</html>
